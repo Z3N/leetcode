@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
+    "s9_palindrome_number","s13_roman_to_integer"
+]
