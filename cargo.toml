@@ -2,5 +2,6 @@
 
 members = [
     "s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
-    "s9_palindrome_number","s13_roman_to_integer","s14_longest_common_prefix","s20_valid_parenteses"
+    "s9_palindrome_number","s13_roman_to_integer","s14_longest_common_prefix","s20_valid_parenteses",
+    "s26_remove_dublicates_from_sorted_array","s21_merge_two_sorted_list"
 ]
