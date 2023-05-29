@@ -1,24 +1,51 @@
-use std::cmp::Ordering;
 
 fn main() {
     println!("Hello, world!");
 }
 
+
 impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
-        s.into_bytes()
-            .chunks(2)
-/*        s.chars()
-            .map(|roman| Solution::map_roman_to_int(roman))
-            .collect::<Vec<i32>>()
-            .chunks()*/
-            //.fold(0,|acc, value|)
-        /// DO WITH MATCH
-        /// //https://byjus.com/maths/roman-numerals/#:~:text=These%20roman%20numerals%20are%20I,%2C%20%E2%80%A6%20till%20XX%20for%2020.
-        todo!()
+        let mut roman_array = (s.as_bytes(), 0u32);
+        let mut result = 0;
+        loop {
+            roman_array = match roman_array {
+                ([first, second, third, remain @ ..], previous) if first == second && second == third => {
+                    let arabic = Solution::map_roman_to_int(*first) * 3;
+                    if arabic > previous {
+                        result -= previous;
+                    } else {
+                        result += previous;
+                    }
+                    (remain, arabic)
+                },
+                ([first, second, remain @ ..], previous) if first == second => {
+                    let arabic = Solution::map_roman_to_int(*first) * 2;
+                    if arabic > previous {
+                        result -= previous;
+                    } else {
+                        result += previous;
+                    }
+                    (remain, arabic)
+                },
+                ([first, remain @ ..], previous) => {
+                    let arabic = Solution::map_roman_to_int(*first);
+                    if arabic > previous {
+                        result -= previous;
+                    } else {
+                        result += previous;
+                    }
+                    (remain, arabic)
+                },
+                ([], previous) => {
+                    result += previous;
+                    return result as i32;
+                }
+            }
+        }
     }
 
-    fn map_roman_to_int(roman: u8) -> i32 {
+    fn map_roman_to_int(roman: u8) -> u32 {
         match roman {
             b'I' => 1,
             b'V' => 5,
@@ -30,12 +57,17 @@ impl Solution {
             _ => 0
         }
     }
-    fn combine_roman(first: i32, second: i32) -> i32{
-        match first.cmp(&second) {
-            Ordering::Less => second - first,
-            _ => second + first
-        }
-    }
 }
 
 struct Solution;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_yourself() {
+        let result = Solution::roman_to_int("DVIII".to_owned());
+        assert_eq!(result, 508);
+    }
+}
