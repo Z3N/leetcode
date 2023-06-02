@@ -12,8 +12,12 @@ impl Solution {
         for (i, value) in nums.into_iter().enumerate() {
             let compliment = target - value;
             match map.get(&compliment) {
-                None => { map.insert(compliment, i); }
-                Some(found_index) => { return vec![i as i32, *found_index as i32]; }
+                None => {
+                    map.insert(compliment, i);
+                }
+                Some(found_index) => {
+                    return vec![i as i32, *found_index as i32];
+                }
             }
         }
         Vec::default()

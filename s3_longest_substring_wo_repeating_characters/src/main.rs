@@ -12,7 +12,7 @@ impl Solution {
         let mut lower_bound = 0;
         let mut result = 0;
         for (index, ch) in s.chars().enumerate() {
-            lower_bound = lower_bound.max(map.insert(ch,index as i32).unwrap_or(-1) + 1);
+            lower_bound = lower_bound.max(map.insert(ch, index as i32).unwrap_or(-1) + 1);
             result = result.max(index as i32 - lower_bound + 1);
         }
         result

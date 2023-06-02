@@ -11,7 +11,7 @@ impl Solution {
                 '[' => result.push(']'),
                 '{' => result.push('}'),
                 ')' | ']' | '}' if result.pop() != Some(char) => return false,
-                _ => ()
+                _ => (),
             }
         }
         result.is_empty()

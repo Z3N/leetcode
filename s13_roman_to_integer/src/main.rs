@@ -1,8 +1,6 @@
-
 fn main() {
     println!("Hello, world!");
 }
-
 
 impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
@@ -10,7 +8,9 @@ impl Solution {
         let mut result = 0;
         loop {
             roman_array = match roman_array {
-                ([first, second, third, remain @ ..], previous) if first == second && second == third => {
+                ([first, second, third, remain @ ..], previous)
+                    if first == second && second == third =>
+                {
                     let arabic = Solution::map_roman_to_int(*first) * 3;
                     if arabic > previous {
                         result -= previous;
@@ -18,7 +18,7 @@ impl Solution {
                         result += previous;
                     }
                     (remain, arabic)
-                },
+                }
                 ([first, second, remain @ ..], previous) if first == second => {
                     let arabic = Solution::map_roman_to_int(*first) * 2;
                     if arabic > previous {
@@ -27,7 +27,7 @@ impl Solution {
                         result += previous;
                     }
                     (remain, arabic)
-                },
+                }
                 ([first, remain @ ..], previous) => {
                     let arabic = Solution::map_roman_to_int(*first);
                     if arabic > previous {
@@ -36,7 +36,7 @@ impl Solution {
                         result += previous;
                     }
                     (remain, arabic)
-                },
+                }
                 ([], previous) => {
                     result += previous;
                     return result as i32;
@@ -54,7 +54,7 @@ impl Solution {
             b'C' => 100,
             b'D' => 500,
             b'M' => 1000,
-            _ => 0
+            _ => 0,
         }
     }
 }

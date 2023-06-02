@@ -4,7 +4,8 @@ fn main() {
 
 impl Solution {
     pub fn longest_palindrome(s: String) -> String {
-        let manacher_string = "^".bytes()
+        let manacher_string = "^"
+            .bytes()
             .chain(s.bytes())
             .flat_map(|char| [char, b'#'])
             .chain("$".bytes())
@@ -22,8 +23,10 @@ impl Solution {
                 let index_mirror = 2 * center - index;
                 palindromes[index] = palindromes[index_mirror].min(max_right - index);
             }
-            while manacher_string[index + palindromes[index] + 1] == manacher_string[index - palindromes[index] - 1] {
-                palindromes[index]+=1;
+            while manacher_string[index + palindromes[index] + 1]
+                == manacher_string[index - palindromes[index] - 1]
+            {
+                palindromes[index] += 1;
             }
             if index + palindromes[index] > max_right {
                 center = index;
@@ -34,7 +37,8 @@ impl Solution {
                 max_palindrome_index = index;
             }
         }
-        manacher_string.into_iter()
+        manacher_string
+            .into_iter()
             .skip(max_palindrome_index - max_palindrome + 1)
             .take(2 * max_palindrome - 1)
             .filter(|char| *char != b'#')
@@ -61,5 +65,4 @@ mod tests {
         let result = Solution::longest_palindrome(str);
         assert_eq!(result, "bb");
     }
-
 }
