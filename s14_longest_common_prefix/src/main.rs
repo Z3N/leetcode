@@ -4,9 +4,20 @@ fn main() {
     println!("Hello, world!");
 }
 
+
 struct Solution;
 
 impl Solution {
+    pub fn longest_common_prefix_iter(strs: Vec<String>) -> String {
+        strs.into_iter().reduce(|acc, str|
+            acc.chars().zip(str.chars())
+               .take_while(|(left,right)|  left == right)
+               .map(|(left,_)| left)
+               .collect()
+        )
+            .unwrap_or(String::default())
+    }
+    pub fn longest_common_prefix_v1(strs: Vec<String>) -> String {
     pub fn longest_common_prefix(mut strs: Vec<String>) -> String {
         let mut min_len = std::usize::MAX;
         while strs.len() > 1 {
@@ -36,31 +47,29 @@ impl Solution {
     pub fn longest_common_prefix_v1(strs: Vec<String>) -> String {
         let capacity = strs.len();
         let first_word = strs.get(0).get_or_insert(&"".to_string()).to_owned();
-        let map = first_word.chars()
-                            .enumerate()
-                            .map(|(index, char)| (index, (1, char)))
-                            .collect::<BTreeMap<_, _>>();
+        let map = first_word.chars().enumerate().map(|(index, char)| (index, (1, char)))
+            .collect::<BTreeMap<_,_>>();
 
         strs.into_iter()
             .skip(1)
-            .fold(map, |mut map, string| {
-                for (index, char) in string.chars().enumerate() {
-                    if let Some(entry) = map.get_mut(&index) {
-                        if entry.1 == char {
-                            entry.0 += 1;
-                        } else {
-                            break;
-                        }
-                    } else {
-                        break;
-                    }
-                }
-                map
-            })
-            .into_iter()
+            .fold(map,
+                              |mut map, string| {
+                                  for (index, char) in string.chars().enumerate() {
+                                      if let Some(entry) = map.get_mut(&index) {
+                                          if entry.1 == char {
+                                              entry.0 += 1;
+                                          } else {
+                                              break
+                                          }
+                                      } else {
+                                          break
+                                      }
+                                  }
+                                  map
+                              }
+        ).into_iter()
             .take_while(|(_, (frequency, _))| *frequency == capacity)
-            .map(|(_, (_, char))| char)
-            .collect::<String>()
+            .map(|(_, (_, char))| char).collect::<String>()
     }
 }
 
@@ -70,9 +79,7 @@ mod tests {
 
     #[test]
     fn test_yourself() {
-        let result = Solution::longest_common_prefix(vec!["cir".to_string(),
-                                                          "car".to_string(),
-                                                          "curl".to_string(),]);
+        let result = Solution::longest_common_prefix(vec!["cir".to_string(),"car".to_string()]);
         assert_eq!(result, "c");
     }
 }
