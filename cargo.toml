@@ -1,7 +1,32 @@
 [workspace]
 
 members = [
-    "s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
+    "quick_selection", "quick_sort_dj","s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
     "s9_palindrome_number","s13_roman_to_integer","s14_longest_common_prefix","s20_valid_parenteses",
-    "s26_remove_dublicates_from_sorted_array","s21_merge_two_sorted_list","s217_contains_dublicate", "s120_triangle", "s48_rotate_image"
+    "s26_remove_dublicates_from_sorted_array","s21_merge_two_sorted_list","s217_contains_dublicate", "s120_triangle", "s48_rotate_image", "s151_reverse_words_in_string",
+    "s80_remove_duplicates_from_sorted_array_2", "s189_rotate_array", "s88_merge_sorted_array", "s27_remove_element", "s169_majority_element", "s347_top_k_frequent_elements",
+    "s121_best_time_to_buy_and_sell_stock", "s242_valid_anagram", "s1232_check_if_it_is_a_straight_line", "s15_3sum", "s125_valid_palindrome", "s122_best_time_to_buy_and_sell_stock_2",
+    "s58_length_of_last_word", "s28_find_the_index_of_the_first_occurrence_in_a_string", "s392_is_subsequence", "s383_ransome_note", "s205_isomorphic_strings", "s290_word_pattern",
+    "s202_happy_number", "s219_contains_duplicate_2", "s228_summary_ranges", "s141_linked_list_cycle", "s104_maximum_depth_of_binary_tree", "s100_same_tree", "s226_invert_binary_tree",
+    "s101_symmetric_tree", "s112_path_sum", "s637_Average_of_levels_in_binary_tree", "s530_minimum_absolute_difference_in_bst", "s108_convert_sorted_array_to_binary_search_tree",
+    "s35_search_insert_position", "s67_add_binary", "s190_reverse_bits", "s191_number_of_1_bits", "s136_single_number", "s66_plus_one", "s69_sqrt_x", "s70_climbing_stairs", "s55_jump_game",
+    "s45_jump_game_2", "s274_h_index"
 ]
+
+#[profile.dev]
+#opt-level = 3
+#lto = true
+
+#[profile.release]
+#opt-level = 3
+#lto = true
+
+#[profile.bench]
+#opt-level = 3
+#lto = true
+
+
+#[profile.test]
+#opt-level = 3
+#lto = true
+#overflow-checks = false
