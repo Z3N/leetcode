@@ -25,5 +25,3 @@
  <li><code>1 &lt;= n &lt;= 20</code></li> 
  <li><code>-1000 &lt;= matrix[i][j] &lt;= 1000</code></li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Array</li><li>Math</li><li>Matrix</li></div></div><br><div><li>👍 14655</li><li>👎 653</li></div>

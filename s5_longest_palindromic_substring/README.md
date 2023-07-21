@@ -23,5 +23,3 @@
  <li><code>1 &lt;= s.length &lt;= 1000</code></li> 
  <li><code>s</code> consist of only digits and English letters.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>String</li><li>Dynamic Programming</li></div></div><br><div><li>👍 25218</li><li>👎 1485</li></div>

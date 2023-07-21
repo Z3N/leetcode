@@ -20,5 +20,3 @@
  <li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li> 
  <li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li><li>Sorting</li></div></div><br><div><li>👍 9326</li><li>👎 1156</li></div>

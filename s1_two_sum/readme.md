@@ -36,9 +36,3 @@
  <li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li> 
  <li><strong>Only one valid answer exists.</strong></li> 
 </ul>
-
-<p>&nbsp;</p> 
-<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than&nbsp;
-<code>O(n<sup>2</sup>)&nbsp;</code>time complexity?
-
-<div><div>Related Topics</div><div><li>Array</li><li>Hash Table</li></div></div><br><div><li>👍 46093</li><li>👎 1500</li></div>

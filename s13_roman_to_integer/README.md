@@ -55,5 +55,3 @@ M             1000</pre>
  <li><code>s</code> contains only&nbsp;the characters <code>('I', 'V', 'X', 'L', 'C', 'D', 'M')</code>.</li> 
  <li>It is <strong>guaranteed</strong>&nbsp;that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Hash Table</li><li>Math</li><li>String</li></div></div><br><div><li>👍 10503</li><li>👎 604</li></div>

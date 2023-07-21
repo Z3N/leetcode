@@ -52,5 +52,3 @@ It does not matter what you leave beyond the returned k (hence they are undersco
  <li><code>-100 &lt;= nums[i] &lt;= 100</code></li> 
  <li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Array</li><li>Two Pointers</li></div></div><br><div><li>👍 11018</li><li>👎 14867</li></div>

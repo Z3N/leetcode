@@ -34,5 +34,3 @@
 
 <p>&nbsp;</p> 
 <strong>Follow up:</strong> Could you solve it without converting the integer to a string?
-
-<div><div>Related Topics</div><div><li>Math</li></div></div><br><div><li>👍 9635</li><li>👎 2511</li></div>

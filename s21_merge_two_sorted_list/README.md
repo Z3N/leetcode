@@ -34,5 +34,3 @@
  <li><code>-100 &lt;= Node.val &lt;= 100</code></li> 
  <li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Linked List</li><li>Recursion</li></div></div><br><div><li>👍 18404</li><li>👎 1714</li></div>

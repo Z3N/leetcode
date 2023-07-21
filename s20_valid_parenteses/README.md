@@ -37,5 +37,3 @@
  <li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li> 
  <li><code>s</code> consists of parentheses only <code>'()[]{}'</code>.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>String</li><li>Stack</li></div></div><br><div><li>👍 19964</li><li>👎 1200</li></div>

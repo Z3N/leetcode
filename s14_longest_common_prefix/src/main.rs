@@ -13,7 +13,7 @@ impl Solution {
             let tail = strs.split_off(strs.len() - strs.len() % 2);
             strs = strs.chunks_exact(2)
                        .map(|pair| {
-                           let min_string = pair[0].dfgdfgas_bytes()
+                           let min_string = pair[0].as_bytes()
                                                    .iter()
                                                    .zip(pair[1].as_bytes())
                                                    .take(min_len)

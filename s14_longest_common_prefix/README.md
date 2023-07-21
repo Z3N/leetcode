@@ -26,5 +26,3 @@
  <li><code>0 &lt;= strs[i].length &lt;= 200</code></li> 
  <li><code>strs[i]</code> consists of only lowercase English letters.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>String</li><li>Trie</li></div></div><br><div><li>👍 13972</li><li>👎 3963</li></div>

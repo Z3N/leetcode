@@ -33,5 +33,3 @@
  <li><code>0 &lt;= Node.val &lt;= 9</code></li> 
  <li>It is guaranteed that the list represents a number that does not have leading zeros.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Linked List</li><li>Math</li><li>Recursion</li></div></div><br><div><li>👍 25803</li><li>👎 5004</li></div>

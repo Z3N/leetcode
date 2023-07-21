@@ -33,5 +33,3 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
  <li><code>0 &lt;= s.length &lt;= 5 * 10<sup>4</sup></code></li> 
  <li><code>s</code> consists of English letters, digits, symbols and spaces.</li> 
 </ul>
-
-<div><div>Related Topics</div><div><li>Hash Table</li><li>String</li><li>Sliding Window</li></div></div><br><div><li>👍 33857</li><li>👎 1473</li></div>
