@@ -1,5 +1,5 @@
 [workspace]
-
+resolver = "2"
 members = [
     "quick_selection", "quick_sort_dj","s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
     "s9_palindrome_number","s13_roman_to_integer","s14_longest_common_prefix","s20_valid_parenteses",
@@ -10,7 +10,8 @@ members = [
     "s202_happy_number", "s219_contains_duplicate_2", "s228_summary_ranges", "s141_linked_list_cycle", "s104_maximum_depth_of_binary_tree", "s100_same_tree", "s226_invert_binary_tree",
     "s101_symmetric_tree", "s112_path_sum", "s637_Average_of_levels_in_binary_tree", "s530_minimum_absolute_difference_in_bst", "s108_convert_sorted_array_to_binary_search_tree",
     "s35_search_insert_position", "s67_add_binary", "s190_reverse_bits", "s191_number_of_1_bits", "s136_single_number", "s66_plus_one", "s69_sqrt_x", "s70_climbing_stairs", "s55_jump_game",
-    "s45_jump_game_2", "s274_h_index"
+    "s45_jump_game_2", "s274_h_index", "s1624_largest_substring_between_two_equal_brackets", "s380_insert_delete_get_random_O1", "s2379_minimum_recolors_to_get_k_consecutive_black_blocks",
+    "s238_product_of_array_except_self", "s134_gas_station", "s222_count_complete_tree_nodes", "s12_integer_to_roman", "s6_zigzag_conversion"
 ]
 
 #[profile.dev]
