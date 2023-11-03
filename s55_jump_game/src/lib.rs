@@ -1,19 +1,14 @@
 impl Solution {
     pub fn can_jump(nums: Vec<i32>) -> bool {
-        /*let mut max = 1;
-        for num in nums.into_iter() {
-            max = std::cmp::max(max - 1, num);
-            if max == 0 { return false }
-        }
-        true*/
         nums.into_iter()
-            .try_fold(1, |acc, distance| {
-                if acc == 0 {
-                    None
-                } else {
-                    Some(std::cmp::max(acc - 1, distance))
-                }
-            })
+            .try_fold(1,
+                      |acc, distance| {
+                          if acc == 0 {
+                              None
+                          } else {
+                              Some(std::cmp::max(acc - 1, distance))
+                          }
+                      })
             .is_some()
     }
 }

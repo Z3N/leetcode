@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    "quick_selection", "quick_sort_dj","s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
+    "quick_selection", "quick_sort_dj","mduck","s1_two_sum","s2_add_two_numbers", "s3_longest_substring_wo_repeating_characters","s5_longest_palindromic_substring",
     "s9_palindrome_number","s13_roman_to_integer","s14_longest_common_prefix","s20_valid_parenteses",
     "s26_remove_dublicates_from_sorted_array","s21_merge_two_sorted_list","s217_contains_dublicate", "s120_triangle", "s48_rotate_image", "s151_reverse_words_in_string",
     "s80_remove_duplicates_from_sorted_array_2", "s189_rotate_array", "s88_merge_sorted_array", "s27_remove_element", "s169_majority_element", "s347_top_k_frequent_elements",
@@ -13,8 +13,9 @@ members = [
     "s45_jump_game_2", "s274_h_index", "s1624_largest_substring_between_two_equal_brackets", "s380_insert_delete_get_random_O1", "s2379_minimum_recolors_to_get_k_consecutive_black_blocks",
     "s238_product_of_array_except_self", "s134_gas_station", "s222_count_complete_tree_nodes", "s12_integer_to_roman", "s6_zigzag_conversion", "s167_two_sum_ii_input_array_is_sorted",
     "s11_container_with_most_water", "s209_minimum_size_subarray_sum", "s36_valid_sudoku", "s54_spiral_matrix", "s73_set_matrix_zeroes", "s289_game_of_life", "s49_group_anagrams",
-    "s128_longest_consecutive_sequence",
-]
+    "s128_longest_consecutive_sequence", "s56_merge_intervals", "s57_insert_interval", "s452_minimum_number_of_arrows_to_burst_balloons", "s71_simplify_path", "s155_min_stack",
+    "s150_evaluate_reverse_polish_notation", "s92_reverse_linked_list_ii", "s19_remove_nth_node_from_end_of_list", "s82_remove_duplicates_from_sorted_list_ii", "s61_rotate_list",
+    "s86_partition_list", "s146_lru_cache", "s105_construct_binary_tree_from_preorder_and_inorder_traversal", "s106_construct_binary_tree_from_inorder_and_postorder_traversal"]
 
 #[profile.dev]
 #opt-level = 3
