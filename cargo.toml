@@ -15,7 +15,10 @@ members = [
     "s11_container_with_most_water", "s209_minimum_size_subarray_sum", "s36_valid_sudoku", "s54_spiral_matrix", "s73_set_matrix_zeroes", "s289_game_of_life", "s49_group_anagrams",
     "s128_longest_consecutive_sequence", "s56_merge_intervals", "s57_insert_interval", "s452_minimum_number_of_arrows_to_burst_balloons", "s71_simplify_path", "s155_min_stack",
     "s150_evaluate_reverse_polish_notation", "s92_reverse_linked_list_ii", "s19_remove_nth_node_from_end_of_list", "s82_remove_duplicates_from_sorted_list_ii", "s61_rotate_list",
-    "s86_partition_list", "s146_lru_cache", "s105_construct_binary_tree_from_preorder_and_inorder_traversal", "s106_construct_binary_tree_from_inorder_and_postorder_traversal"]
+    "s86_partition_list", "s146_lru_cache", "s105_construct_binary_tree_from_preorder_and_inorder_traversal", "s106_construct_binary_tree_from_inorder_and_postorder_traversal",
+    "s114_flatten_binary_tree_to_linked_list", "s129_sum_root_to_leaf_numbers", "s173_binary_search_tree_iterator", "s236_lowest_common_ancestor_of_a_binary_tree", "s199_binary_tree_right_side_view",
+    "s102_binary_tree_level_order_traversal", "s103_binary_tree_zigzag_level_order_traversal", "s230_kth_smallest_element_in_a_bst", "s98_validate_binary_search_tree", "s200_number_of_islands",
+    "s130_surrounded_regions", "s399_evaluate_division"]
 
 #[profile.dev]
 #opt-level = 3

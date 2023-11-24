@@ -24,39 +24,29 @@ enum NodeDirection {
 
 impl Solution {
     pub fn build_tree(preorder: Vec<i32>, inorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
-        let mut preorder = preorder.into_iter();
-        let mut inorder = inorder.into_iter().peekable();
-        let dummy = Some(Rc::new(RefCell::new(TreeNode::new(0))));
-        let mut chain = dummy.clone();
-        let mut traversal = Vec::new();
-        traversal.push(TreeNode::new(preorder.next()?));
-        while let Some(next_node) = traversal.pop() {
-            if let Some(left_node) = inorder.next_if(|&x| x == next_node.val) {
-                let mut root = traversal.pop()?;
-                root.left = Some(Rc::new(RefCell::new(TreeNode::new(left_node))));
-                inorder.next_if_eq(&root.val);
-                if let Some(right_node) = inorder.next() {
-                    root.right = Some(Rc::new(RefCell::new(TreeNode::new(right_node))));
-                }
+        let mut root = Rc::new(RefCell::new(TreeNode::new(preorder[0])));
+        let mut current = root.clone();
+        let mut index = 0;
+        let mut stack = Vec::new();
+        for (i, &val) in preorder.iter().enumerate().skip(1) {
+            if inorder[index] != preorder[i - 1] {
+                let left_node = Rc::new(RefCell::new(TreeNode::new(val)));
+                current.borrow_mut().left = Some(left_node.clone());
+                stack.push(current.clone());
+                current = left_node;
             } else {
-                traversal.push(next_node);
+                while !stack.is_empty() && stack.last()?.borrow().val == inorder[index + 1] {
+                    current = stack.pop()?;
+                    index += 1;
+                }
+                let right_node = Rc::new(RefCell::new(TreeNode::new(preorder[i])));
+                current.borrow_mut().right = Some(right_node.clone());
+                current = right_node;
+                index += 1;
             }
         }
-        todo!()
+        Some(root)
     }
 }
 
 struct Solution;
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let preorder = vec![3, 9, 20, 15, 7];
-        let inorder = vec![9, 3, 15, 20, 7];
-        let result = Solution::build_tree(preorder, inorder);
-        assert_eq!(result, None);
-    }
-}
