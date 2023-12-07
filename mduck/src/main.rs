@@ -76,7 +76,7 @@ fn create_project_name(from: &Path) -> Result<String> {
     let capt = regex.captures(name)
                     .wrap_err(eyre!("Failed to parse file name with regex: {}", regex.as_str()))?;
     let number = capt.get(1).wrap_err("Failed to get number from file name")?.as_str();
-    let remaining = capt.get(2).unwrap().as_str().to_lowercase().replace(' ', "_");
+    let remaining = capt.get(2).unwrap().as_str().to_lowercase().replace(' ', "_").replace(['(', ')'], "-");
     Ok(format!("s{number}_{remaining}"))
 }
 
